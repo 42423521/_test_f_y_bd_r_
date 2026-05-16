@@ -1,6 +1,7 @@
 # _test_f_y_bd_r_
 
-
+<details>
+<summary>宣泄_</summary>
 rz zz nt mdzz
 
 老东西你再开柜门试试
@@ -49,4 +50,14 @@ z:打开杀戒了,)_,
 ，*（），
 
 
+
+</details>
+
+
+github
+<details> <summary>code</summary>
+print(1)
+</details>
+
+看对面cards, 透视,() ,(),           透视             look 对面what cards,() ,(),
 
