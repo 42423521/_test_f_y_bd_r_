@@ -1,0 +1,263 @@
+
+
+data_:
+{'local_subactions': True, 'match_and_starting_data': {'match': {'action_player_id': 3233975, 'action_side': 'left', 'actions': [], 'actions_url': 'https://kards.live.1939api.com/matches/v2/561339168/actions', 'current_action_id': 0, 'current_turn': 1, 'deck_id_left': 96061254, 'deck_id_right': 97761028, 'left_is_online': 1, 'match_id': 561339168, 'match_type': 'battle', 'match_url': 'https://kards.live.1939api.com/matches/v2/561339168', 'modify_date': '2025-07-27T13:25:54.705159Z', 'notifications': [], 'player_id_left': 3233975, 'player_id_right': 5746468, 'player_status_left': 'not_done', 'player_status_right': 'not_done', 'right_is_online': 1, 'start_side': 'left', 'status': 'running', 'winner_id': 0, 'winner_side': ''}, 'starting_data': {'ally_faction_left': 'usa', 'ally_faction_right': 'japan', 'card_back_left': 'cardback_starter_german', 'card_back_right': 'cardback_starter_usa', 'deck_left': [{'card_id': 28, 'is_gold': False, 'location': 'deck_left', 'location_number': 4, 'name': 'card_event_the_war_machine'}, {'card_id': 31, 'is_gold': False, 'location': 'deck_left', 'location_number': 5, 'name': 'card_event_blitz_doctrine'}, {'card_id': 22, 'is_gold': False, 'location': 'deck_left', 'location_number': 6, 'nam
+把提出来的与data_对，
+
+换chinese
+
+
+
+
+
+def main():
+    # 1. 登录并获取 JWT
+
+    global token_
+
+  #  token = login_ss_(None,None)#login_session()
+
+    
+
+  ##################################################  dl_()
+
+   ####################### fiel
+    """
+
+    parser.add_argument('--force-login', action='store_true')
+
+
+   
+################################w
+   # jwt = sm.get_jwt(force=True)   # 不管三七二十一重登
+
+
+    jwt_ = get_jwt(force=args.force_login)
+
+   ########################################################### token_ = login_ss_(None,None)#login_session()
+
+    """
+
+
+
+  #  print(f"登录成功，JWT: {token_}")
+
+
+
+
+
+
+
+
+
+
+    print(f"，JWT: {token_}")
+
+
+
+
+############一天登一次，不要频繁登,(),
+
+##########################################,90,
+
+
+
+
+
+
+
+    # 2. 加载本地数据集与参考列表
+    dataset = load_dataset(args.dataset)
+
+
+
+    reference = load_nfile(args.nfile)
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+################## # 后续逻辑可以放心地用 reference，无需额外判断
+  ############################################################################################################## #################################################################  if some_card_id in reference:
+       #################################################################################################################################################################################################################################################### ...
+
+
+
+
+  #  parser.add_argument('--force-login', action='store_true')
+
+
+   ######################################### import parser
+
+
+  #  import argparse
+  #  parser_ = argparse.ArgumentParser()
+
+
+  #  parser_.add_argument('--force-login', action='store_true')
+
+
+   # args_ = parser_.parse_args()
+ 
+    args_=args
+
+#...
+
+    if args_.force_login:
+
+        jwt_ = get_jwt(force=args.force_login)
+
+        token_=jwt_
+
+        print("grd_dddddddd_")
+
+   # jwt = get_jwt(force=args.force_login)
+
+
+    global HEADERS,PROXIES
+
+    HEADERS,PROXIES,player_id_=test_grd_(token_)
+
+
+
+
+
+
+    # 3. 获取所有 match_id
+    match_ids = get_match_ids()
+   # print(f"共获取到 {len(match_ids)} 个 match_id")
+
+
+   #print
+
+
+
+
+    print(f"狗日的.{match_ids},kill all human,")
+
+
+  #####################################################################################################################################  print("狗日的.{match_ids},kill all human,")
+
+    print(match_ids)
+
+
+    ########sys.
+
+   ####### do_mulligan()
+
+
+    import sys
+
+   # sys.exit()
+
+
+
+##############################################################
+
+
+    ###########y l 
+
+    # 4. 遍历每个 match:
+    used_cards = set()
+    for mid in match_ids:
+        # 4.1 获取比赛信息
+        match_data = fetch_match_info(mid)
+
+        # 4.2 初始化洗牌阶段
+      #  do_mulligan(mid, 'left')
+      #  do_mulligan(mid, 'right')
+
+        # 4.3 轮询获取动作日志
+        raw_actions = poll_actions(mid, min_id=1, opponent_id=match_data['match_and_starting_data']['match']['player_id_right'])
+
+        #满级ai
+
+        ##########################################################################################################################################哪个是自己 另一个就是bier
+
+
+
+        
+
+弱智 滚  气死了
+
+
+
+
+       # return [get_field_(m, 'match_id') for m in data_.get('match', [])]
+
+
+        if match_data['match_and_starting_data']['match']['player_id_right']==player_id_:
+    
+
+            print("left_")
+  
+       # else:
+
+
+        
+
+        elif match_data['match_and_starting_data']['match']['player_id_right']!=player_id_:
+
+            print("right")
+
+        elif match_data['match_and_starting_data']['match']['player_id_left']==player_id_:
+
+
+            #########################
+
+
+
+            print("right_")
+
+
+
+
+
+
+#match_data['match_and_starting_data']['match']['player_id_left']##;ef']==player_id_
+
+
+        elif match_data['match_and_starting_data']['match']['player_id_left']!=player_id_:#l']==player_id_
+
+
+            print("right_2_")
+
+            print("right_")
+
+            print("left_")
+
+        # 4.4 提取使用过的卡牌
+      #  used_cards |= extract_used_cards(raw_actions)
+
+    # 5. 对比参考列表
+    only_used, only_ref = compare_sets(used_cards, reference)
+
+
+
+    # 6. 输出结果
+    print("日志使用但参考无：")
+    for line in format_cards(only_used, dataset): print(line)
+
+    print("参考有但日志无：")
+    for line in format_cards(only_ref, dataset): print(line)
+
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--nfile', required=True)
+    parser.add_argument('--dataset', required=True)
+
+    parser.add_argument('--force-login', action='store_true')
+
+    args = parser.parse_args()
+    main()
+
+ 
